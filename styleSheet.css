@@ -1,0 +1,22 @@
+* {box-sizing: border-box;}
+
+/* variables */
+:root {
+	--headerWidth: 100px;
+}
+
+body{
+		margin-left:var(--headerWidth);
+		font-size: 16px;
+		font-family: "Arimo", sans-serif;
+		padding: 20px;
+	}
+
+h1,h2,h3,h4 {font-family: "Chelsea Market", Veranda;}
+h1{font-size: 3rem;}
+h2 {font-size:2rem;}
+
+/* Heading */
+#header {position:fixed; left:0; top:0; width:var(--headerWidth); background:white; color:black; height:100vh; padding:20px;}
+	#header > div {width:100%; height:100%; display:flex; flex-flow:column;}
+	#header > div > h4 {height:100%; writing-mode: vertical-rl;}
