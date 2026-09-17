@@ -10,9 +10,10 @@ body{
 		font-size: 16px;
 		font-family: "Arimo", sans-serif;
 		padding: 20px;
+		background: url('https://png.pngtree.com/thumb_back/fh260/background/20231128/pngtree-vibrant-watercolor-texture-in-light-green-for-your-design-image_13813948.png');
 	}
 
-h1,h2,h3,h4 {font-family: "Chelsea Market", Veranda;}
+h1,h2,h3,h4 {font-family: "Chelsea Market", Veranda; text-transform: uppercase;}
 h1{font-size: 3rem;}
 h2 {font-size:2rem;}
 
