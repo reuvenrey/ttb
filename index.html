@@ -14,9 +14,53 @@
 	<style></style>
 <body>
 	<div id='header'><div><h4>JACOP PAINTER DESIGN</h4><h4 style='text-align:end'>TIES THAT BIND</h4></div></div>
+
+	<div class="parallax-section">
+	  <div class="parallax-layer parallax-bg" data-speed="0.3"></div>
+	  <div class="parallax-layer parallax-mid" data-speed="0.6"></div>
 	
-    <h1>Ties That Bind</h1>
-    <p>A a brave young girl’s journey to sever the world’s ties and discover true freedom.</p>
+	  <div class="content" style='height:200vh; background:rgba(255,255,255,0.5);'>
+	    <h1>Ties That Bind</h1>
+    	<p>A a brave young girl’s journey to sever the world’s ties and discover true freedom.</p>
+	  </div>
+	</div>
+    
 
 </body>
+
+	<!-- PARALLAX CONTROL -->
+	<script>
+		const layers = document.querySelectorAll('.parallax-layer');
+		
+		let lastScrollY = window.scrollY;
+		let ticking = false;
+		
+		// Respect reduced motion and touch devices
+		const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+		if (prefersReduced || isTouch) {
+		  // disable parallax for accessibility or on touch devices
+		  layers.forEach(l => l.style.transform = 'none');
+		} else {
+		  window.addEventListener('scroll', onScroll, { passive: true });
+		}
+		
+		function onScroll() {
+		  lastScrollY = window.scrollY;
+		  if (!ticking) {
+		    window.requestAnimationFrame(update);
+		    ticking = true;
+		  }
+		}
+		
+		function update() {
+		  layers.forEach(layer => {
+		    const speed = parseFloat(layer.dataset.speed) || 0.5; // 0 = static, 1 = same as scroll
+		    // move opposite direction slightly for slower background feel
+		    const y = - (lastScrollY * speed);
+		    layer.style.transform = `translate3d(0, ${y}px, 0)`;
+		  });
+		  ticking = false;
+		}
+	</script>
 </html>
