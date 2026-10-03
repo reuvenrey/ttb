@@ -3,9 +3,12 @@
 /* variables */
 :root {
 	/*--headerWidth: 100px;*/
-	--borderWidth:100px;
 	--stndPadding: 20px;
-	--maxWindowWidth:2000px;
+	--maxViewWidth:1200px;
+	--separatorRatio:8 / 2;
+	--smallRotationAngle: 5deg;
+	--smallRotationAngleAlt: -5deg;
+	--maxContentWidth: 1000px;
 }
 
 body{
@@ -13,7 +16,7 @@ body{
 		padding:0px;
 		font-size: 16px;
 		font-family: "Arimo", sans-serif;
-		background-image: url('files/acidWashPaper.jpg');
+		background-image: url('files/fullRes/tileablePaper.jpg');
 		background-position: center;
 		background-repeat: repeat;
 }
@@ -27,29 +30,77 @@ h2 {font-size:2rem;}
 	#header > div {width:100%; height:100%; display:flex; flex-flow:column;}
 	#header > div > h4 {height:100%; writing-mode: vertical-rl;} */
 
-/* Page Border */
-.borderLeft, .borderRight{
-	position:fixed;
-	width:var(--borderWidth);
-	height:100vh;
-	top:0;
-	background-image: url(files/acidWashPaper.jpg);
-	background-size: cover; background-position: center;
-}
-	.borderLeft {left:0; mask-image: linear-gradient(to right, black 20%, transparent 100%);}
-	.borderRight {right:0; mask-image: linear-gradient(to left, black 20%, transparent 100%);}
-
-/* Page Elements */
 section {
-	width:100vw;
-	padding:var(--stndPadding) var(--borderWidth) var(--stndPadding) var(--borderWidth);
-	min-height:100vh;
-	max-width: var(--maxWindowWidth);
-	position: relative;
+	width:100%; max-width:var(--maxViewWidth);
+	min-height:100dvh;
+	display:flex; flex-flow:column; align-items: center; justify-content: center;
+	position:relative;
 
-	background-attachment: fixed; 
-	/* Centers the image and scales it nicely */
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	padding:var(--stndPadding);
+	margin:auto;
+	
+	/* debug 
+	border:5px solid blue;*/
 }
+
+	section.notFull {min-height: initial;}
+
+	section > div {
+		width:100%; max-width: var(--maxContentWidth);
+		/* debug 
+		border:5px solid cyan;*/
+	}
+
+		.titleImg {
+			width:100%; height:auto;
+			max-width: var(--maxContentWidth);
+		}
+
+		.columnDiv {display:flex; flex-flow: row; align-items: center; gap: var(--stndPadding);}
+			.columnDiv > div {width:60%;}
+			.columnDiv > img {width:40%;}
+
+	section > .tiltedBkg {
+		position:absolute; top:0; left:0; 
+		width:100%; height:100%;
+		object-fit: cover;
+		transform: rotate(var(--smallRotationAngle));
+		z-index:-1;
+	}
+
+	section > .tiltedBkg.alt {
+		transform: rotate(var(--smallRotationAngleAlt));
+	}
+
+.separater {
+	width:100%; max-width: var(--maxViewWidth);
+	aspect-ratio: var(--separatorRatio);
+	position:relative; z-index: 999;
+	
+	margin:auto;
+
+	/*
+	background: url(files/fullRes/tanPaper_full.jpg);
+	background-size: cover; background-repeat: no-repeat; */
+
+	/* move up by half height 
+	transform: translateY(-50%); */
+
+	/* debug 
+	border:5px solid red;*/
+}
+
+/* Loader */
+#loader{
+	position:fixed; width:100%; height:100%; z-index: 1000;
+	top:0; left:0;
+	background:url('files/fullRes/cardboard.jpg');
+	background-size: cover; background-repeat: no-repeat;
+	display:flex; flex-flow: column; align-items: center; justify-content: center;
+	text-align: center;
+	transition: 0.5s;
+}
+	#loader div {max-width: var(--maxContentWidth); margin:auto;}
+	#loader img {width:100%; max-width: 600px; height:auto;}
+
+	#loader.hidden {opacity:0; pointer-events: none;}
