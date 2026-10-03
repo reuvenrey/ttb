@@ -94,8 +94,7 @@ section {
 #loader{
 	position:fixed; width:100%; height:100%; z-index: 1000;
 	top:0; left:0;
-	background:url('files/fullRes/cardboard.jpg');
-	background-size: cover; background-repeat: no-repeat;
+	background: #a89883 url('files/fullRes/cardboard.jpg') center/cover;
 	display:flex; flex-flow: column; align-items: center; justify-content: center;
 	text-align: center;
 	transition: 0.5s;
