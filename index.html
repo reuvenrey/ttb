@@ -5,15 +5,19 @@
 	    <title>Ties That Bind Film | Jacob Painter Productions</title>
 	</head>
 
-	<style></style>
-<body onload="document.getElementById('loader').classList.add('hidden');">
+	<style>
+		#ttbTitle {transition: 0.8s; scale:1;}
+			#ttbTitle.smol {scale:0;}
+	</style>
+
+<body onload="document.getElementById('loader').classList.add('hidden'); document.getElementById('ttbTitle').classList.remove('smol');">
 	<div id="loader"><div><img src='files/lowRes/LR-amaraAndLittleRay.png'></div><div><h2>Loading...</h2></div></div>
 	<div id="header"></div>
 	
 	<section class='banner'>
 		<img src="files/fullRes/planetscape.JPG" style="filter: brightness(70%) blur(2px);">
 		<div>
-			<img class='titleImg' src="files/fullRes/ttb_title.png" style="filter:drop-shadow(2px 4px 6px black);">
+			<img class='titleImg smol' id="ttbTitle" src="files/fullRes/ttb_title.png" style="filter:drop-shadow(2px 4px 6px black);">
 			<h2 style="text-align: center; margin:0;" class="bright">A stop-motion musical adventure</h2>
 		</div>
 	</section>
@@ -22,7 +26,7 @@
 
 	<section>
 		<div>
-			<div class="columnDiv">
+			<div class="columnDiv half">
 				<div>
 					<h2>About the Film</h2>
 					Ties That Bind follows a young Amara in a town taken over by oppressive Helping Hands, large stone hands which have attached themselves to every citizen via a set of marionette-like strings. 
@@ -31,7 +35,7 @@
 					<p><b>Producer:</b> Jess Grace Garcia</p>
 					<a href="people">View full Cast & Crew</a>
 				</div>
-				<img src="">
+				<img src="files/lowRes/LR-amaraAndLittleRay.png">
 			</div>
 		</div>
 	</section>
@@ -54,14 +58,51 @@
 	<div class="separater"></div>
 
 	<section>
+		<div style="text-align: center;">
+			<h2>Meet a Unique Cast of Characters</h2>
+			<div class="characterDiv">
+				<div>
+					<img src="files/lowRes/amp.png">
+					<h3>Amp</h3>
+					(TBA)
+				</div>
+				<div>
+					<img src="files/lowRes/volt.png">
+					<h3>The Mayor</h3>
+					(TBA)
+				</div>
+				<div>
+					<img src="files/lowRes/crank.png">
+					<h3>The Crank</h3>
+					(TBA)
+				</div>
+			</div>
+			<p><a href="people">View Full Cast</a></p>
+		</div>
+	</section>
+
+	<div class="separater"><div class="spacer"><img src='files/lowRes/spacerLine.png'></div></div>
+
+	<section>
 		<div>
 			<div class="columnDiv">
-				<img src="">
+				<img src="files/lowRes/amaraSinging.png">
 				<div>
 					<h2>With Original Music</h2>
 					Amara and Toby's thrilling adventure is told in part through original musical numbers, written by londoner <b>Leo</b>. 
 					<p>Inspired by the works of <b>musical writer's name</b> and <b>other musical writer's name</b>, Jacob and Leo worked closely together to craft songs that told this unique story while authentically representing the cultures and people Amara represents.</p>
 				</div>
+			</div>
+
+			<div class="spacer"><img src='files/lowRes/spacerLine.png'></div>
+
+			<div class="columnDiv half">
+				<div>
+					<h2>and Unique Locations</h2>
+					The sets of Ties That Bind pull inspiration from the 70s with a tacky 50s overlay stuck on by the Helping Hands. It's a beautiful visualization of regressive ideologies de-modernizing a progressive society. 
+					<p><a href="worlds">Explore the Worlds of Ties That Bind</a></p>
+				</div>
+				<img src="files/lowRes/locationSketches.png">
 			</div>
 		</div>
 	</section>
@@ -72,7 +113,7 @@
 		<img class="bkg" src="files/fullRes/planetscape.JPG">
 		<div class="fsc flipped">
 			<div class="bright topLeft">
-			<h2>An Important Story to Tell</h2>
+			<h2>An Inspiring Story</h2>
 			</div>
 			<div class="bright bottomRight halfWidth">
 				<b>Ties That Bind</b> is an important story with an important meaning. Amara and Toby represent the good folks of the world taking actions, whether small or large, to tackle the evil. Whether it's building a jetpack and flying to space, or voting, any action against bad people is one in the right direction.

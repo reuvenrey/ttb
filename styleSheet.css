@@ -100,7 +100,7 @@ section {
 .separater {
 	width:100%; max-width: var(--maxViewWidth);
 	height:15dvw;
-	position:relative; z-index: 999;
+	position:relative; z-index: 900;
 	margin:auto;
 
 	/*
