@@ -13,10 +13,10 @@ if(loader.innerHTML == ''){
 }
 
 header.innerHTML = '<div><img id="headerImg" src="files/fullRes/ttb_title.png" onclick="window.open(\'index.html\',\'_self\')"><div>\
-<a href="people.html">Cast & Crew</a> <a href="contact.html">Get in Touch</a>\
+<a href="people">Cast & Crew</a>\
 <a href=""><img src=\'files/lowRes/instaIcon.png\'> \
 </div></div>';
 
 footer.innerHTML = '<img src="files/fullRes/ttb_title.png">\
-    <div><a>Socials</a> | <a href="https://canva.link/uotlyu88xalgof9">Pitch Deck</a> | <a>Link 3</a></div>\
-    <div style="color:dimgray"><p><b>(C) 2026 Painter Productions</b></p></div>';
+    <div><a href="mailto:tiesthatbindfeature@gmail.com">tiesthatbindfeature@gmail.com</a> | <a href="https://canva.link/uotlyu88xalgof9">Pitch Deck</a> | <a>Instagram</a></div>\
+    <div style="color:dimgray"><p><b>&copy; 2026 Jacob Painter Productions</b></p></div>';

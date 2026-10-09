@@ -2,7 +2,10 @@
 
 /* variables */
 :root {
-	--headerWidth: 100px;
+	--headerWidth: 80px;
+	--headerFontHeight:20px;
+	--headerPadding:5px;
+
 	--stndPadding: 20px;
 	--maxViewWidth:1200px;
 	--separatorRatio:8 / 2;
@@ -11,6 +14,7 @@
 	--maxContentWidth: 1000px;
 	--spacerHeight: 100px;
 	--stndBorderRadius: 15px;
+	
 
 	/* Colors */
 	--yarnPurple: #543263;
@@ -20,7 +24,7 @@
 
 body{
 		/*margin-left:var(--headerWidth);*/
-		padding:0px;
+		padding:0px; margin:0px;
 		font-size: 18px;
 		font-family: "Arimo", sans-serif;
 		background-image: url('files/fullRes/tileablePaper.jpg');
@@ -49,7 +53,16 @@ section {
 	border:5px solid blue;*/
 }
 
-	section.fV {min-height:calc(100dvh - var(--headerWidth));}
+	section.fV, section.banner {min-height:calc(100dvh - var(--headerWidth));}
+
+		section.banner {width:100%; max-width: initial;}
+
+		section.banner > img {
+			position: absolute;
+			top:0; left:0; width:100%; height:100%;
+			object-fit: cover;
+			border-radius: 0px;
+		}
 
 	section > div {
 		width:100%; max-width: var(--maxContentWidth);
@@ -123,6 +136,9 @@ section {
 		.bottomRight {position:absolute; bottom:0; right:0;}
 		.halfWidth {width:50%;}
 
+		.fsc.flipped .topLeft {left:initial; right:0;}
+		.fsc.flipped .bottomRight {right:initial; left:0;}
+
 	@media screen and (max-width:800px) {
 		.halfWidth {width:100%;}
 	}	
@@ -139,9 +155,11 @@ section {
 
 img {border-radius: 5%;}
 
-.columnDiv {display:flex; flex-flow: row; align-items: center; gap: var(--stndPadding);}
+.columnDiv {display:flex; flex-flow: row; align-items: center; gap: 40px;}
 		.columnDiv > div {width:60%;}
 		.columnDiv > img {width:40%;}
+
+		.columnDiv.half > div,  .columnDiv.half > img {width:50%;}
 
 	@media screen and (max-width:800px) {
 		.columnDiv {flex-flow: column;}
@@ -173,7 +191,7 @@ img {border-radius: 5%;}
 #header {
 	position: fixed; top:0; left:0;
 	width:100%; height:var(--headerWidth);
-	padding: var(--stndPadding);
+	padding: var(--headerPadding);
 	background:white; 
 	z-index: 999;
 }
@@ -189,7 +207,7 @@ img {border-radius: 5%;}
 
 	#header > div > div > a {
 		display:inline-block; margin-right: var(--stndPadding); color:black; text-decoration: none;
-		font-family: "Chelsea Market", Veranda; font-size: 20px;
+		font-family: "Chelsea Market", Veranda; font-size: var(--headerFontHeight);
 	}
 		#header > div > div > a:hover {color:var(--yarnPurple);}
-		#header > div > div > a > img {height:20px; width:auto; margin:1em;}
+		#header > div > div > a > img {height:var(--headerFontHeight); width:auto; margin:1em;}
