@@ -153,6 +153,13 @@ section {
 		.characterDiv > div > img {width:70%; aspect-ratio: 1/1; object-fit: cover; border-radius: 15%;}
 		.characterDiv > div > h3 {margin-bottom: 5px;}
 
+	@media screen and (max-width:1000px) {
+		.characterDiv > div {width:46%; margin:var(--stndPadding) 2% var(--stndPadding) 2%;}
+	}
+	@media screen and (max-width:800px) {
+		.characterDiv > div {width:100%; margin:var(--stndPadding) 0 var(--stndPadding) 0;}
+	}
+
 img {border-radius: 5%;}
 
 .columnDiv {display:flex; flex-flow: row; align-items: center; gap: 40px;}
@@ -164,6 +171,7 @@ img {border-radius: 5%;}
 	@media screen and (max-width:800px) {
 		.columnDiv {flex-flow: column;}
 			.columnDiv > div, .columnDiv > img {width:100%;}
+			.columnDiv.half > div,  .columnDiv.half > img {width:100%;}
 	}
 
 /* Loader */
