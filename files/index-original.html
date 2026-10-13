@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head id="pgHead">
+        <link rel="stylesheet" href="styleSheet.css">
+	    <title>Ties That Bind Movie | Jacob Painter Productions</title>
+	</head>
+
+	<style>
+		#ttbTitle {transition: 0.8s; scale:1;}
+			#ttbTitle.smol {scale:0;}
+	</style>
+
+<body onload="document.getElementById('loader').classList.add('hidden'); document.getElementById('ttbTitle').classList.remove('smol');" style="margin-top:0;">
+	<div id="loader"><div><img src='files/lowRes/LR-amaraAndLittleRay.png'></div><div><h2>Loading...</h2></div></div>
+	<div id="header" class="trans"></div>
+	
+	<section class='banner' style="height:100dvh">
+		<img src="files/fullRes/planetscape.JPG" style="filter: brightness(70%) blur(2px);">
+		<div>
+			<img class='titleImg smol' id="ttbTitle" src="files/fullRes/ttb_title.png" style="filter:drop-shadow(2px 4px 6px black);">
+			<h2 style="text-align: center; margin:0;" class="bright">A stop-motion musical adventure</h2>
+		</div>
+	</section>
+
+	<div class="separater"></div>
+
+	<section>
+		<div>
+			<div class="columnDiv half">
+				<div>
+					<h2>About the Film</h2>
+					Ties That Bind follows a young Amara in a town taken over by oppressive <em>Helping Hands</em>, large stone hands which have attached themselves to every citizen via a set of marionette-like strings. 
+					<p>Plant-loving Amara frees herself from her strings and, along with her neighbor / sidekick Toby, travels to the end of her world to find a safe home for her plant, Little Ray.</p>
+					<p><b>Writer and Director:</b> Jacob Painter</p>
+					<p><b>Producer:</b> Jess Grace Garcia</p>
+					<a href="people">View full Cast & Crew</a>
+				</div>
+				<img src="files/lowRes/LR-amaraAndLittleRay.png">
+			</div>
+		</div>
+	</section>
+
+	<div class="separater"></div>
+
+	<section class='fV'>
+		<img class="bkg" src="files/fullRes/park.JPG">
+		<div class="fsc">
+			<div class="bright topLeft">
+			<h1>Welcome to Town Name</h1>
+			</div>
+			<div class="bright bottomRight halfWidth">
+				The Film takes place in the fictional town of <b>Town Name</b>, a once thriving and diverse community. After the Helping Hands took over, this utopia became a stale promise of yesterday; Farms paved over for factory districts, playgrounds left to rot...
+				<p>It’s as if the 70’s were just getting ready to end when the Hands came in and stuck a 50’s facade over them.</p>
+			</div>
+		</div>
+	</section>
+
+	<div class="separater"></div>
+
+	<section>
+		<div style="text-align: center;">
+			<h2>Meet a Unique Cast of Characters</h2>
+			<div style="text-align: left;">
+				<div class="columnDiv">
+					<img src="files/lowRes/amp.png">
+					<div>
+						<h3>Amp & Volt</h3>
+						Don't let their goofy demenor fool you, these two blimps are hot-heads full of <em>Evil</em>. Played by <b>TBD</b> and <b>TBD</b>, these lively servants extend the reach of the helping hands by shocking humans into submission.
+					</div>
+				</div>
+				<p></p>
+				<div class="columnDiv">
+					<div>
+						<h3>The Mayor</h3>
+						Not evil himself, but a figure head of the Helping Hands. The Mayor is Amara's friend, then her villain, and then her savior.
+					</div>
+					<img src="files/lowRes/amp.png">
+				</div>
+			</div>
+			<p><a href="people">View Full Cast</a></p>
+		</div>
+	</section>
+
+	<div class="separater"></div>
+
+	<section>
+		<div>
+			<div class="columnDiv">
+				<img src="files/lowRes/amaraSinging.png">
+				<div>
+					<h2>With Original Music</h2>
+					Amara and Toby's thrilling adventure is told in part through original musical numbers, written by londoner <b>Leo</b>. 
+					<p>Inspired by the works of <b>musical writer's name</b> and <b>other musical writer's name</b>, Jacob and Leo worked closely together to craft songs that told this unique story while authentically representing the cultures and people Amara represents.</p>
+				</div>
+			</div>
+
+			<div class="spacer"></div>
+
+			<div class="columnDiv half">
+				<div>
+					<h2>and Unique Locations</h2>
+					The sets of Ties That Bind pull inspiration from the 70s with a tacky 50s overlay stuck on by the Helping Hands. It's a beautiful visualization of regressive ideologies de-modernizing a progressive society. 
+					<p><a href="worlds">Explore the Worlds of Ties That Bind</a></p>
+				</div>
+				<img src="files/lowRes/locationSketches.png">
+			</div>
+		</div>
+	</section>
+
+	<div class="separater"></div>
+
+	<section class='fV'>
+		<img class="bkg" src="files/fullRes/planetscape.JPG">
+		<div class="fsc flipped">
+			<div class="bright topLeft">
+			<h2>An Inspiring Story</h2>
+			</div>
+			<div class="bright bottomRight halfWidth">
+				<b>Ties That Bind</b> is an important story with an important meaning. Amara and Toby represent the good folks of the world taking actions, whether small or large, to tackle the evil. Whether it's building a jetpack and flying to space, or voting, any action against bad people is one in the right direction.
+			</div>
+		</div>
+	</section>
+
+	<div class="separater"></div>
+
+	<section>
+		<div>
+			<h2>Will you be a part of our story?</h2>
+			If you would like to join the talented team putting this project together, please reach out to us at <a href="mailto:tiesthatbindfeature@gmail.com">tiesthatbindfeature@gmail.com</a>
+		</div>
+	</section>
+
+
+	
+	<div id="footer"></div>
+</body>
+
+	<script src="files/scripts/headerScript.js"></script>
+	<script>
+		//const header = document.getElementById('header');
+
+		// TOGGLE WHEN USER SCROLLS
+		window.addEventListener('scroll', () => {
+		// Checks if vertical scroll position is greater than 50px
+		const isScrolled = window.scrollY < 50; 
+		
+		// Toggles the class based on the true/false evaluation
+		header.classList.toggle('trans', isScrolled);
+		});
+	</script>
+</html>

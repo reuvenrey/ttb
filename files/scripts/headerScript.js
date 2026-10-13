@@ -14,6 +14,7 @@ if(loader.innerHTML == ''){
 
 header.innerHTML = '<div><img id="headerImg" src="files/fullRes/ttb_title.png" onclick="window.open(\'index.html\',\'_self\')"><div>\
 <a href="people">Cast & Crew</a>\
+<a href="contribute">How to Support</a>\
 <a href=""><img src=\'files/lowRes/instaIcon.png\'> \
 </div></div>';
 

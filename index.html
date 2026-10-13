@@ -10,11 +10,11 @@
 			#ttbTitle.smol {scale:0;}
 	</style>
 
-<body onload="document.getElementById('loader').classList.add('hidden'); document.getElementById('ttbTitle').classList.remove('smol');">
+<body onload="document.getElementById('loader').classList.add('hidden'); document.getElementById('ttbTitle').classList.remove('smol');" style="margin-top:0;">
 	<div id="loader"><div><img src='files/lowRes/LR-amaraAndLittleRay.png'></div><div><h2>Loading...</h2></div></div>
-	<div id="header"></div>
+	<div id="header" class="trans"></div>
 	
-	<section class='banner'>
+	<section class='banner' style="height:100dvh">
 		<img src="files/fullRes/planetscape.JPG" style="filter: brightness(70%) blur(2px);">
 		<div>
 			<img class='titleImg smol' id="ttbTitle" src="files/fullRes/ttb_title.png" style="filter:drop-shadow(2px 4px 6px black);">
@@ -29,8 +29,8 @@
 			<div class="columnDiv half">
 				<div>
 					<h2>About the Film</h2>
-					Ties That Bind follows a young Amara in a town taken over by oppressive <em>Helping Hands</em>, large stone hands which have attached themselves to every citizen via a set of marionette-like strings. 
-					<p>Plant-loving Amara frees herself from her strings and, along with her neighbor / sidekick Toby, travels to the end of her world to find a safe home for her plant, Little Ray.</p>
+					In a dystopian world where humanity is puppeted by giant stone hands in the sky, a brave young girl escapes her strings to protect the planet’s last surviving flower.
+					<p>Together with her floral companion and an unexpected friend, she must outrun mechanical nightmares and build back a once-thriving rebellion to sever the world’s ties and discover true freedom.</p>
 					<p><b>Writer and Director:</b> Jacob Painter</p>
 					<p><b>Producer:</b> Jess Grace Garcia</p>
 					<a href="people">View full Cast & Crew</a>
@@ -49,7 +49,7 @@
 			<h1>Welcome to Town Name</h1>
 			</div>
 			<div class="bright bottomRight halfWidth">
-				Our story takes place in the fictional town of <b>Town Name</b>, a once thriving and diverse community. After the Helping Hands took over, this utopia became a stale promise of yesterday; Farms paved over for factory districts, playgrounds left to rot...
+				The Film takes place in the fictional town of <b>Town Name</b>, a once thriving and diverse community. After the Helping Hands took over, this utopia became a stale promise of yesterday; Farms paved over for factory districts, playgrounds left to rot...
 				<p>It’s as if the 70’s were just getting ready to end when the Hands came in and stuck a 50’s facade over them.</p>
 			</div>
 		</div>
@@ -58,51 +58,53 @@
 	<div class="separater"></div>
 
 	<section>
-		<div style="text-align: center;">
-			<h2>Meet a Unique Cast of Characters</h2>
-			<div style="text-align: left;">
-				<div class="columnDiv">
-					<img src="files/lowRes/amp.png">
-					<div>
-						<h3>Amp & Volt</h3>
-						Don't let their goofy demenor fool you, these two blimps are hot-heads full of <em>Evil</em>. Played by <b>TBD</b> and <b>TBD</b>, these lively servants extend the reach of the helping hands by shocking humans into submission.
-					</div>
-				</div>
-				<p></p>
-				<div class="columnDiv">
-					<div>
-						<h3>The Mayor</h3>
-						Not evil himself, but a figure head of the Helping Hands. The Mayor is Amara's friend, then her villain, and then her savior.
-					</div>
-					<img src="files/lowRes/amp.png">
+		<div>
+			<div class="columnDiv">
+				<img src="files/lowRes/amaraWaving.png">
+				<div>
+					<h2>Meet Amara</h2>
+					The film's lead is a young girl who loves flowers and hates hands. Her best friend, Little Ray, is a fragile sappling whom the Helping Hands have determined is an enemy of the state. Amara will do anything to find a safe home for her friend.
 				</div>
 			</div>
-			<p><a href="people">View Full Cast</a></p>
+			<div class="spacer"></div>
+			<div class="columnDiv">
+				<div>
+					<h2>and her neighbor, Toby</h2>
+					The shy boy next door who doesen't get out much. Infact, he's been so well hidden that the Hands don't know he exists, to his advantage.
+					<p>Amara thinks Toby is a scaredy-cat, but as their adventures take them to faraway and scary places, Toby learns to be courageous in the face of evil.</p>
+				</div>
+				<img src="files/castPhotos/reuven.jpg">
+			</div>
 		</div>
 	</section>
 
 	<div class="separater"></div>
 
 	<section>
-		<div>
-			<div class="columnDiv">
-				<img src="files/lowRes/amaraSinging.png">
+		<div class="cardboard">
+			<div class="columnDiv half">
+				<img src="files/lowRes/helpingHands.png"> 
 				<div>
-					<h2>With Original Music</h2>
-					Amara and Toby's thrilling adventure is told in part through original musical numbers, written by londoner <b>Leo</b>. 
-					<p>Inspired by the works of <b>musical writer's name</b> and <b>other musical writer's name</b>, Jacob and Leo worked closely together to craft songs that told this unique story while authentically representing the cultures and people Amara represents.</p>
+					<h2>The Helping Hands</h2>
+					No one knows where these strange stone controllers have come from, but they are desperate to control. 
+					<p>Under the guise of providing uniformity, structure, and purpose, the Hands employ mechanical tyrants and puppet-like control over the Town's citizens to mine resources and exploit the world they've conqured.</p>
 				</div>
 			</div>
+		</div>
+	</section>
 
-			<div class="spacer"></div>
+	<div class="spacer"></div>
 
-			<div class="columnDiv half">
+	<section>
+		<div>
+			<div class="splitDiv">
+				<img src="files/lowRes/amp.png">
 				<div>
-					<h2>and Unique Locations</h2>
-					The sets of Ties That Bind pull inspiration from the 70s with a tacky 50s overlay stuck on by the Helping Hands. It's a beautiful visualization of regressive ideologies de-modernizing a progressive society. 
-					<p><a href="worlds">Explore the Worlds of Ties That Bind</a></p>
+					<h3>Subheading Text</h3>
+					The Helping Hands don't work alone. They employ the services of mechanical tyrants <b>Amp and Volt</b> who help coral the humans and exploit their world's resources.
+					<p>The Crank is the voice of the Hands, embodied by a floating 60s record player. He speaks to Amara through the voice of the Mayor.</p>
 				</div>
-				<img src="files/lowRes/locationSketches.png">
+				<img src="files/lowRes/crank.png">
 			</div>
 		</div>
 	</section>
@@ -113,10 +115,11 @@
 		<img class="bkg" src="files/fullRes/planetscape.JPG">
 		<div class="fsc flipped">
 			<div class="bright topLeft">
-			<h2>An Inspiring Story</h2>
+			<h2>Amara and Toby's Adeventure</h2>
 			</div>
 			<div class="bright bottomRight halfWidth">
-				<b>Ties That Bind</b> is an important story with an important meaning. Amara and Toby represent the good folks of the world taking actions, whether small or large, to tackle the evil. Whether it's building a jetpack and flying to space, or voting, any action against bad people is one in the right direction.
+				Armed with stringless limbs and a flower, Amara and Toby outsmart the evil regime and travel to the ends of their earth to find a safe haven for Little Ray. Their journey is out of this world.
+				<p>Told through intricately hand-crafted stop-motion animation and a captivating musical soundtrack, Ties That Bind is an inspiring tale of individualism, community, and the courage it takes to defy a broken system. To save the world, Amara must look past the strings of oppression, embarking on an adventure that will take her to the ends of the Earth and beyond.</p>
 			</div>
 		</div>
 	</section>
@@ -125,8 +128,47 @@
 
 	<section>
 		<div>
-			<h2>Will you be a part of our story?</h2>
-			If you would like to join the talented team putting this project together, please reach out to us at <a href="mailto:tiesthatbindfeature@gmail.com">tiesthatbindfeature@gmail.com</a>
+			<div class="columnDiv alignTop">
+				<div>
+					<h2>Original Music</h2>
+					Amara and Toby's adventure is told in part with a soundtrack of 7 original musical numbers, written by <b>Jacob Painter</b> and <b>Leo Simpe-Asante</b>.
+					<p>The soundtrack is simultaneously intense and orchestral, but also simple and grounded and reflects the style of the animation.</p>
+					<h3>Tracklist</h3>
+					<ol style="font-style: italic;">
+						<li>Ties That Bind</li>
+						<li>What Can These Hands Do</li>
+						<li>Harmonious Rex and the Electrobites</li>
+						<li>Little Ray and I</li>
+						<li>Into the Stars</li>
+						<li>Little Ray and I (Reprise)</li>
+						<li>Give It a Chance</li>
+					</ol>
+					<h4><a href="https://soundcloud.com/ties-that-bind-86069041/sets/ties-that-bind-songwriter/s-xOM3gusA0So?si=994134ca7b1045e8beecb56b94d8dc5e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">Listen on Soundcloud</a></h4>
+				</div>
+				<img src="files/lowRes/amaraSinging.png">
+			</div>
+		</div>
+	</section>
+
+	<div class="separater"></div>
+
+	<section>
+		<div>
+			<div class="splitDiv">
+				<img src="files/lowRes/amp.png">
+				<div>
+					<h2>Support the Film</h2>
+					Amara and Toby's story is an important one to tell, and we need your support! If you would like to support the film, or participate in its production, please contact us:
+					<p>
+						<b>tiesthatbindfeature@gmail.com</b> | <a style="cursor:pointer" onclick="navigator.clipboard.writeText('tiesthatbindfeature@gmail.com')">copy</a>
+					</p>
+					<p>
+						Producer - Jess Grace Garcia <br>
+						443-655-7611
+					</p>
+				</div>
+				<img src="files/lowRes/volt.png">
+			</div>
 		</div>
 	</section>
 
@@ -136,4 +178,16 @@
 </body>
 
 	<script src="files/scripts/headerScript.js"></script>
+	<script>
+		//const header = document.getElementById('header');
+
+		// TOGGLE WHEN USER SCROLLS
+		window.addEventListener('scroll', () => {
+		// Checks if vertical scroll position is greater than 50px
+		const isScrolled = window.scrollY < 50; 
+		
+		// Toggles the class based on the true/false evaluation
+		header.classList.toggle('trans', isScrolled);
+		});
+	</script>
 </html>

@@ -7,11 +7,11 @@
 	--headerPadding:5px;
 
 	--stndPadding: 20px;
-	--maxViewWidth:1200px;
+	--maxViewWidth:1400px;
 	--separatorRatio:8 / 2;
 	--smallRotationAngle: 2deg;
 	--smallRotationAngleAlt: -2deg;
-	--maxContentWidth: 1000px;
+	--maxContentWidth: 1200px;
 	--spacerHeight: 100px;
 	--stndBorderRadius: 15px;
 	
@@ -37,6 +37,8 @@ h1,h2,h3 {font-family: "Chelsea Market", Veranda; text-transform: uppercase;}
 h1{font-size: 3rem;}
 h2 {font-size:2rem;}
 h4 {font-weight: bold;}
+
+.subHeading {margin-top:-0.5em;}
 
 a {color:var(--darkGray);}
 
@@ -78,7 +80,8 @@ section {
 
 		.cardboard {
 			background: url('files/fullRes/cardboard.jpg') center/cover;
-			box-shadow: 0px 8px 16px 2px rgba(0, 0, 0, 0.2);
+			box-shadow: 0px 8px 16px 2px rgba(0, 0, 0, 0.2); border-radius: var(--stndBorderRadius);
+			padding: var(--stndPadding);
 		}
 
 	section > .bkg {
@@ -102,18 +105,6 @@ section {
 	height:15dvw;
 	position:relative; z-index: 900;
 	margin:auto;
-
-	/*
-	aspect-ratio: var(--separatorRatio);
-
-	background: url(files/fullRes/tanPaper_full.jpg);
-	background-size: cover; background-repeat: no-repeat; */
-
-	/* move up by half height 
-	transform: translateY(-50%); */
-
-	/* debug 
-	border:5px solid red;*/
 }
 
 .spacer {width:100%; margin-top: var(--spacerHeight); margin-bottom: var(--spacerHeight);}
@@ -167,11 +158,26 @@ img {border-radius: 5%;}
 		.columnDiv > img {width:40%;}
 
 		.columnDiv.half > div,  .columnDiv.half > img {width:50%;}
+		.columnDiv.alignTop {align-items: flex-start;}
 
 	@media screen and (max-width:800px) {
 		.columnDiv {flex-flow: column;}
 			.columnDiv > div, .columnDiv > img {width:100%;}
 			.columnDiv.half > div,  .columnDiv.half > img {width:100%;}
+	}
+
+.splitDiv {display:flex; flex-flow: row; align-items:center; gap:40px; width:100%;}
+	/* Make all children default to 30% fixed width */
+	.splitDiv > * {
+		width:25%; height:auto;
+	}
+
+	.splitDiv.alignTop {align-items: flex-start;}
+
+	/* Override only the middle element */
+	.splitDiv > *:nth-child(2) {
+		width:50%;
+		text-align: center;
 	}
 
 /* Loader */
@@ -200,9 +206,15 @@ img {border-radius: 5%;}
 	position: fixed; top:0; left:0;
 	width:100%; height:var(--headerWidth);
 	padding: var(--headerPadding);
-	background:white; 
+	background:rgba(255,255,255,1); 
 	z-index: 999;
+	transition: 0.4s;
 }
+
+	#header.trans {background: rgba(255,255,255,0); color:white;}
+		#header.trans > div > div > a {color:white;}
+		#header.trans > div > div > a:hover {color:var(--lightGreen);}
+
 	#header > div {
 		width:100%; height:100%; max-width: var(--maxContentWidth);
 		display: flex; flex-flow: row; align-items: center; margin:auto;
