@@ -75,7 +75,8 @@ section {
 
 		.titleImg {
 			width:100%; height:auto;
-			max-width: var(--maxContentWidth);
+			max-width: 900px;
+			margin:auto;
 		}
 
 		.cardboard {
@@ -160,12 +161,6 @@ img {border-radius: 5%;}
 		.columnDiv.half > div,  .columnDiv.half > img {width:50%;}
 		.columnDiv.alignTop {align-items: flex-start;}
 
-	@media screen and (max-width:800px) {
-		.columnDiv {flex-flow: column;}
-			.columnDiv > div, .columnDiv > img {width:100%;}
-			.columnDiv.half > div,  .columnDiv.half > img {width:100%;}
-	}
-
 .splitDiv {display:flex; flex-flow: row; align-items:center; gap:40px; width:100%;}
 	/* Make all children default to 30% fixed width */
 	.splitDiv > * {
@@ -178,6 +173,16 @@ img {border-radius: 5%;}
 	.splitDiv > *:nth-child(2) {
 		width:50%;
 		text-align: center;
+	}
+
+	@media screen and (max-width:800px) {
+		.columnDiv {flex-flow: column;}
+			.columnDiv > div, .columnDiv > img {width:100%;}
+			.columnDiv.half > div,  .columnDiv.half > img {width:100%;}
+
+		.splitDiv {flex-flow: column;}
+			.splitDiv > * {width:100%;}
+			.splitDiv > *:nth-child(2) {width:100%;}
 	}
 
 /* Loader */
