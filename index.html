@@ -10,7 +10,7 @@
 			#ttbTitle.smol {scale:0;}
 	</style>
 
-<body onload="document.getElementById('loader').classList.add('hidden'); document.getElementById('ttbTitle').classList.remove('smol');" style="margin-top:0;">
+<body onload="document.getElementById('loader').classList.add('hidden'); document.getElementById('ttbTitle').classList.remove('smol'); addListener();" style="margin-top:0;">
 	<div id="loader"><div><img src='files/lowRes/LR-amaraAndLittleRay.png'></div><div><h2>Loading...</h2></div></div>
 	<div id="header" class="trans"></div>
 	
@@ -31,8 +31,7 @@
 					<h2>About the Film</h2>
 					In a dystopian world where humanity is puppeted by giant stone hands in the sky, a brave young girl escapes her strings to protect the planet’s last surviving flower.
 					<p>Together with her floral companion and an unexpected friend, she must outrun mechanical nightmares and build back a once-thriving rebellion to sever the world’s ties and discover true freedom.</p>
-					<p><b>Writer and Director:</b> Jacob Painter</p>
-					<p><b>Producer:</b> Jess Grace Garcia</p>
+					<p><b>Written and directed by Jacob Painter</b></p>
 					<a href="people">View full Cast & Crew</a>
 				</div>
 				<img src="files/lowRes/LR-amaraAndLittleRay.png">
@@ -46,11 +45,12 @@
 		<img class="bkg" src="files/fullRes/park.JPG">
 		<div class="fsc">
 			<div class="bright topLeft">
-			<h1>Welcome to Evergreen</h1>
+				<h1 style="margin:50px 0 0 0; line-height:75%; font-size:2.5em; font-family: 'Playwrite FR Trad', cursive; text-transform:none; font-style: italic;">Welcome to</h1>
+				<h1 style="margin:5px 0 10px 0; font-size:4em">EVERGREEN</h1>
+				A once thriving community...
 			</div>
-			<div class="bright bottomRight halfWidth">
-				The Film takes place in the fictional town of <b>Evergreen</b>, a once thriving and diverse community. After the Helping Hands took over, this utopia became a stale promise of yesterday; Farms paved over for factory districts, playgrounds left to rot...
-				<p>It’s as if the 70’s were just getting ready to end when the Hands came in and stuck a 50’s facade over them.</p>
+			<div class="bright bottomRight">
+				This 70s inspired town was once full of color and joy, until the 50s came in...
 			</div>
 		</div>
 	</section>
@@ -127,7 +127,7 @@
 		<img class="bkg" src="files/fullRes/planetscape.JPG">
 		<div class="fsc flipped">
 			<div class="bright topLeft">
-			<h2>Amara and Toby's Adventure</h2>
+			<h1 style="margin:5px 0 10px 0; font-size:4em">A New World</h1>
 			</div>
 			<div class="bright bottomRight halfWidth">
 				Armed with stringless limbs and a flower, Amara and Toby outsmart the evil regime and travel to the ends of their earth to find a safe haven for Little Ray. Their journey is out of this world.
@@ -191,15 +191,18 @@
 
 	<script src="files/scripts/headerScript.js"></script>
 	<script>
-		//const header = document.getElementById('header');
+		function addListener(){
+			const header = document.getElementById('header');
 
-		// TOGGLE WHEN USER SCROLLS
-		window.addEventListener('scroll', () => {
-		// Checks if vertical scroll position is greater than 50px
-		const isScrolled = window.scrollY < 50; 
+			// TOGGLE WHEN USER SCROLLS
+			window.addEventListener('scroll', () => {
+			// Checks if vertical scroll position is greater than 50px
+			const isScrolled = window.scrollY < 50; 
+			
+			// Toggles the class based on the true/false evaluation
+			header.classList.toggle('trans', isScrolled);
+			});
+		}
 		
-		// Toggles the class based on the true/false evaluation
-		header.classList.toggle('trans', isScrolled);
-		});
 	</script>
 </html>

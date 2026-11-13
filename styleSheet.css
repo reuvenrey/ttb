@@ -7,7 +7,7 @@
 	--headerPadding:5px;
 
 	--stndPadding: 20px;
-	--maxViewWidth:1400px;
+	--maxViewWidth:1600px;
 	--separatorRatio:8 / 2;
 	--smallRotationAngle: 2deg;
 	--smallRotationAngleAlt: -2deg;
@@ -185,6 +185,15 @@ img {border-radius: 5%;}
 			.splitDiv > *:nth-child(2) {width:100%;}
 	}
 
+/* SPECIAL CONTENT (FOR HOME PAGE) */
+
+	/* Image Sliders */
+	.nextSlide {width:60px; aspect-ratio: 2/3; background:white; display:flex; align-items:center; justify-content: center; padding:var(--stndPadding); cursor:pointer;}
+		.nextSlide > img {width:100%; height:auto;}
+
+
+
+/* NAVIGATION ELEMENTS */
 /* Loader */
 #loader{
 	position:fixed; width:100%; height:100%; z-index: 1000;
