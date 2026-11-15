@@ -18,7 +18,7 @@ if(loader.innerHTML == ''){
     loader.innerHTML = "<div><img src='files/lowRes/LR-amaraAndLittleRay.png'></div><div><h2>Loading...</h2></div>";
 }
 
-header.innerHTML = '<div><img id="headerImg" src="files/fullRes/ttb_title.png" onclick="window.open(\'index\',\'_self\')">\
+header.innerHTML = '<div><img id="headerImg" src="files/fullRes/ttb_title.png" onclick="window.open(\'./\',\'_self\')">\
 <div id=\'headerLinks\'></div></div>';
 
 footer.innerHTML = '<img src="files/fullRes/ttb_title.png">\
